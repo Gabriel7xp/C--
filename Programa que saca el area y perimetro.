@@ -1,0 +1,105 @@
+#include <stdlib.h>
+#include <iostream>
+#include <stdio.h>
+float Area();
+float Perimetro();
+int Figura();
+main()
+{
+  int a,b;
+	do{
+	printf("\t\t\tMenu\n 1.- Area\n 2.- Perimetro\n 3.- Salir");
+	scanf("%i",a);
+	printf("1.- Circulo\t2.- Cuadrado\n3.- Rectangulo\t4.- Triangulo\n\t\t\t5.- Salir");
+	scanf("%i",Figura);
+	switch(a)
+	{
+	case 1:
+		printf("El area es %i",Area);
+	break;
+	case 2:
+		printf("El Perimetro es %i ",Perimetro);
+	break;	
+	default:
+	a=3;
+	break;
+	}
+	}while(a!=3)
+}
+int Area()
+{
+	int h,b,op;
+	float radio,r;
+	switch(Figura)
+	{
+		case 1:
+		printf("Ingrese el radio del circulo");
+		scanf("%f",radio);
+		r=radio*radio*3.1416
+		printf("\nEl resultado es_ %f",r);
+		return(r);
+		break;
+		case 2:
+		printf("Ingrese la base %i\n",&b);
+		printf("Ingrese la altura %i\n",&h);
+		r=b*h;
+		printf("El Area del Cuadrado es %f",r);
+		return(r)
+		break;
+		case 3:
+		printf("Ingrese la base %i\n",&b);
+		printf("Ingrese la altura %i\n",&h);
+		r=b*h;
+		printf("El Area del Rectangulo es %f",r);
+		return(r)
+		break;
+		case 4:
+		printf("Ingrese la base %i\n",&b);
+		printf("Ingrese la altura %i\n",&h);
+		r=(b*h)%2;
+		printf("El Area del Triangulo es %f",r);
+		return(r)
+		break;
+		default:
+		break;
+	}
+}
+int Perimetro()
+{
+	int op,b,h;
+	float radio,r;
+	switch(Figura)
+	{
+		case 1:
+		printf("Ingrese el radio del circulo");
+		scanf("%f",radio);
+		r=radio*3.1416
+		printf("\nEl resultado es_ %f",r);
+		return(r);
+		break;
+		case 2:
+		printf("Ingrese la medida de uno de los lados del Cuadrado %i\n",&op);
+		r=op*4;
+		printf("El Perimetro del Cuadrado es %f",r);
+		return(r)
+		break;
+		case 3:
+		printf("Ingrese la base %i\n",&b);
+		printf("Ingrese la altura %i\n",&h);
+		r=(b*2)+(h*2);
+		printf("El Perimetro del Rectangulo es %f",r);
+		return(r)
+		break;
+		case 4:
+		printf("Ingrese la base %i\n",&b);
+		printf("Ingrese el lado izquierdo %i\n",&h);
+		printf("ingrese el lado derecho%i\n",&op );
+		r=b+h+op;
+		printf("El Perimetro del Triangulo es %f",r);
+		return(r)
+		break;
+		default:
+		break;
+	}
+system("pause");
+}
